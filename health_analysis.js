@@ -77,6 +77,9 @@ function resetForm() {
           .then(data => {
             const condition = data.conditions.find(item => item.name.toLowerCase() === input);
 
+            console.log("Data read as "+data);
+            console.log("Stringified data "+JSON.stringify(data));
+
             if (condition) {
               const symptoms = condition.symptoms.join(', ');
               const prevention = condition.prevention.join(', ');
